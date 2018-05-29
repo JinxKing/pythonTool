@@ -7,7 +7,6 @@ def connect(user):
             'password': user['pwd'], 'save_me': '1', 'username': user['usr']}
     response = requests.post(
         "http://10.62.65.185/include/auth_action.php", data=data)
-    print()
     if(-1 != response.text.find('login_ok')):
         print('登录成功！')
         return 1
